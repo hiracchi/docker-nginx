@@ -10,7 +10,7 @@ RUN apk update \
 
 COPY docker-entrypoint.sh /
 EXPOSE 80 443
-ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["/usr/sbin/nginx", "-g", "\"daemon off;\""]
-
+# ENTRYPOINT ["/docker-entrypoint.sh"]
+# CMD ["/usr/sbin/nginx", "-g", "\"daemon off;\""]
+CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
 
